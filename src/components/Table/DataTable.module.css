@@ -1,0 +1,60 @@
+.tablePageWrapper {
+    padding: 20px 50px;
+}
+
+.search, .addFormDiv, .description {
+    border: 2px solid black;
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(173, 209, 237);
+}
+
+.addForm, .addToTableButton {
+    display: none;
+}
+
+.search input, .addForm input {
+    margin: 5px 0;
+}
+
+.pages {
+    margin: 5px;
+    text-decoration: underline;
+}
+
+.pages:hover {
+    text-decoration: none;
+}
+
+.selectedPage {
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 2px solid black;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+table th {
+    background-color: rgb(17, 134, 224);
+}
+
+table td {
+    background-color: white;
+}
+
+.errorMessage {
+    color: red;
+    margin: 5px 0;
+}

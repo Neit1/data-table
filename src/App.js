@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DataTableContainer from './components/Table/DataTableContainer';
+import { Route, NavLink } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path="/" render={() => (
+        <div className="buttonsWrapper">
+          <NavLink to="/littledata"><button className="navButton">Little Data</button></NavLink>
+          <NavLink to="/bigdata"><button className="navButton">Big Data</button></NavLink>
+        </div>)} />
+      <Route path="/littledata" render={() => <DataTableContainer type={"little"} />} />
+      <Route path="/bigdata" render={() => <DataTableContainer type={"big"} />} />
     </div>
   );
 }
